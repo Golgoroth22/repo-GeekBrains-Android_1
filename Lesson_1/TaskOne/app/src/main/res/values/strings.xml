@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TaskOne</string>
+    <string name="offer">Выберите цвет:</string>
+    <string name="result">Результат</string>
+    <string name="effect"></string>
+    <string-array name="colors">
+        <item>Red</item>
+        <item>Black</item>
+        <item>Green</item>
+        <item>White</item>
+    </string-array>
+</resources>
