@@ -7,6 +7,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private Spinner spinner;
+    private TextView textView2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,9 +17,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickColorEffect(View view) {
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
-        TextView textView2 = (TextView) findViewById(R.id.textView2);
+        spinner = (Spinner) findViewById(R.id.spinner);
+        textView2 = (TextView) findViewById(R.id.textView2);
         String color = String.valueOf(spinner.getSelectedItem());
-        textView2.setText(color);
+        String colorEffect = new ColorSpec().getEffect(color, this);
+        textView2.setText(colorEffect);
     }
 }
