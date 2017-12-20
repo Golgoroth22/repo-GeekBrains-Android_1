@@ -1,10 +1,11 @@
 package ru.valentin.falinv22.taskone;
 
 
+import android.app.Activity;
 import android.content.res.Resources;
 
 public class ColorSpec {
-    String getEffect(String color, MainActivity activity) {
+    String getEffect(String color, Activity activity) {
         Resources resources = activity.getResources();
         String result = "";
         if (color.equals("Red")) {
