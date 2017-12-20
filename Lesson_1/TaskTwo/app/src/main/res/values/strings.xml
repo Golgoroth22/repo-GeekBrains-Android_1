@@ -7,4 +7,8 @@
     <string name="a_earth">1</string>
     <string name="q_yes">Просто нажми ДА</string>
     <string name="a_yes">1</string>
+    <string name="q_earth2">Земля плоская?</string>
+    <string name="a_earth2">0</string>
+    <string name="q_desert">Много ли в пустыне песка?</string>
+    <string name="a_desert">1</string>
 </resources>

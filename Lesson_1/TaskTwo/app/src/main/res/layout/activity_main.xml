@@ -24,7 +24,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="32dp"
             android:layout_marginRight="32dp"
-            android:gravity="center"/>
+            android:gravity="center" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,8 +38,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="100"
-                android:text="ДА"
-                android:onClick="clickYesButton"/>
+                android:onClick="clickYesButton"
+                android:text="ДА" />
 
             <TextView
                 android:layout_width="0dp"
@@ -52,8 +52,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="100"
-                android:text="НЕТ"
-                android:onClick="clickNoButton"/>
+                android:onClick="clickNoButton"
+                android:text="НЕТ" />
         </LinearLayout>
 
         <LinearLayout
@@ -64,10 +64,11 @@
             android:layout_marginTop="88dp">
 
             <ImageButton
-                android:id="@+id/back_button"
+                android:id="@+id/forward_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="100"
+                android:onClick="clickForwardButton"
                 android:src="@drawable/ic_arrow_back" />
 
             <TextView
@@ -77,10 +78,11 @@
                 android:layout_weight="50" />
 
             <ImageButton
-                android:id="@+id/forward_button"
+                android:id="@+id/next_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="100"
+                android:onClick="clickNextButton"
                 android:src="@drawable/ic_arrow_forward" />
         </LinearLayout>
     </LinearLayout>

@@ -21,10 +21,12 @@ public class GameLogic {
         questionList.add(new Question(resources.getString(R.string.a_earth), resources.getString(R.string.q_earth)));
         questionList.add(new Question(resources.getString(R.string.a_robot), resources.getString(R.string.q_robot)));
         questionList.add(new Question(resources.getString(R.string.a_yes), resources.getString(R.string.q_yes)));
+        questionList.add(new Question(resources.getString(R.string.a_earth2), resources.getString(R.string.q_earth2)));
+        questionList.add(new Question(resources.getString(R.string.a_desert), resources.getString(R.string.q_desert)));
     }
 
     public String getQuestion() {
-        int random = (int) Math.random() * questionList.size();
+        int random = (int) (Math.random() * questionList.size());
         return questionList.get(random).getQuestion();
     }
 

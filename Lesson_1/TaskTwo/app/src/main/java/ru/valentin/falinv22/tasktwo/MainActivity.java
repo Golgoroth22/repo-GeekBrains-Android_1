@@ -42,6 +42,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void clickNextButton(View view) {
+        question.setText(gameLogic.getQuestion());
+    }
+
+    public void clickForwardButton(View view) {
+        question.setText(gameLogic.getQuestion());
+    }
+
     public void showMessage() {
         if (toast != null) {
             toast.cancel();
