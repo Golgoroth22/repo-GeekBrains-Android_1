@@ -2,6 +2,7 @@ package ru.valentin.falinv22.tasktwo;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.res.Resources;
 
 import java.util.ArrayList;
@@ -15,9 +16,9 @@ public class GameLogic {
     private List<Question> questionList;
     private int rightAnswers = 0;
 
-    public GameLogic(Activity activity) {
+    public GameLogic(Context context) {
         questionList = new ArrayList<>();
-        Resources resources = activity.getResources();
+        Resources resources = context.getResources();
         questionList.add(new Question(resources.getString(R.string.a_earth), resources.getString(R.string.q_earth)));
         questionList.add(new Question(resources.getString(R.string.a_robot), resources.getString(R.string.q_robot)));
         questionList.add(new Question(resources.getString(R.string.a_yes), resources.getString(R.string.q_yes)));
