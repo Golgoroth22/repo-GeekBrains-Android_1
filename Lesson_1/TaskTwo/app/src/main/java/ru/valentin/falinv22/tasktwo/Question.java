@@ -4,7 +4,7 @@ public class Question {
     private String answer;
     private String question;
 
-    public Question(String answer, String question) {
+    public Question(String question, String answer) {
         this.question = question;
         this.answer = answer;
     }
