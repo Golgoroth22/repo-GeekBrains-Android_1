@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/menu_gradient"
     tools:context="ru.valentin.falinv22.tasktwo.QuizGameActivity">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -11,7 +12,6 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="368dp"
         android:layout_height="495dp"
-        android:gravity="center_horizontal"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp"
@@ -20,8 +20,7 @@
         <TextView
             android:id="@+id/question"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_gravity="center_vertical"
+            android:layout_height="200dp"
             android:layout_marginLeft="32dp"
             android:layout_marginRight="32dp"
             android:gravity="center" />
@@ -56,12 +55,16 @@
                 android:text="НЕТ" />
         </LinearLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="88dp">
+            android:layout_marginRight="8dp">
 
             <ImageButton
                 android:id="@+id/forward_button"

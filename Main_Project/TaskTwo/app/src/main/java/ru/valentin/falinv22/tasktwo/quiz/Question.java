@@ -1,4 +1,4 @@
-package ru.valentin.falinv22.tasktwo;
+package ru.valentin.falinv22.tasktwo.quiz;
 
 public class Question {
     private boolean answer;
