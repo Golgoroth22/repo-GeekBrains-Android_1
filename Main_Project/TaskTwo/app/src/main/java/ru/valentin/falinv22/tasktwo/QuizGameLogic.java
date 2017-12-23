@@ -8,7 +8,7 @@ import android.content.res.Resources;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GameLogic {
+public class QuizGameLogic {
     public static final String TRUE_ANSWER = "1";
     public static final String FALSE_ANSWER = "0";
     public static final String RIGHT_ANSWERS_PREF = "Верных ответов - ";
@@ -16,14 +16,14 @@ public class GameLogic {
     private List<Question> questionList;
     private int rightAnswers = 0;
 
-    public GameLogic(Context context) {
+    public QuizGameLogic(Context context) {
         questionList = new ArrayList<>();
         Resources resources = context.getResources();
-        questionList.add(new Question(resources.getString(R.string.a_earth), resources.getString(R.string.q_earth)));
-        questionList.add(new Question(resources.getString(R.string.a_robot), resources.getString(R.string.q_robot)));
-        questionList.add(new Question(resources.getString(R.string.a_yes), resources.getString(R.string.q_yes)));
-        questionList.add(new Question(resources.getString(R.string.a_earth2), resources.getString(R.string.q_earth2)));
-        questionList.add(new Question(resources.getString(R.string.a_desert), resources.getString(R.string.q_desert)));
+        questionList.add(new Question(resources.getString(R.string.q_earth), resources.getString(R.string.a_earth)));
+        questionList.add(new Question(resources.getString(R.string.q_robot), resources.getString(R.string.a_robot)));
+        questionList.add(new Question(resources.getString(R.string.q_yes), resources.getString(R.string.a_yes)));
+        questionList.add(new Question(resources.getString(R.string.q_earth2), resources.getString(R.string.a_earth2)));
+        questionList.add(new Question(resources.getString(R.string.q_desert), resources.getString(R.string.a_desert)));
     }
 
     public String getQuestion() {
