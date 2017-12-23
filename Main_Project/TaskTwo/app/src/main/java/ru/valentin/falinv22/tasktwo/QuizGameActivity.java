@@ -8,16 +8,16 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
-    private GameLogic gameLogic;
+public class QuizGameActivity extends AppCompatActivity {
+    private QuizGameLogic gameLogic;
     private TextView question;
     private Toast toast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        gameLogic = new GameLogic(this);
+        setContentView(R.layout.quiz_game_activity);
+        gameLogic = new QuizGameLogic(this);
         question = (TextView) findViewById(R.id.question);
         question.setText(gameLogic.getQuestion());
     }
