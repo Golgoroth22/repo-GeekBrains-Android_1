@@ -23,7 +23,7 @@ public class QuizGameLogic {
         questionList.add(new Question(resources.getString(R.string.q1), resources.getBoolean(R.bool.a1)));
         questionList.add(new Question(resources.getString(R.string.q2), resources.getBoolean(R.bool.a2)));
         questionList.add(new Question(resources.getString(R.string.q3), resources.getBoolean(R.bool.a3)));
-        questionList.add(new Question(resources.getString(R.string.q3), resources.getBoolean(R.bool.a4)));
+        questionList.add(new Question(resources.getString(R.string.q4), resources.getBoolean(R.bool.a4)));
         questionList.add(new Question(resources.getString(R.string.q5), resources.getBoolean(R.bool.a5)));
     }
 

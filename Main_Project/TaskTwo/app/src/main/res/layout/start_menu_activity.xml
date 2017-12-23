@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/menu_gradient"
     android:orientation="vertical">
 
     <TextView
@@ -11,14 +12,54 @@
         android:layout_height="100dp"
         android:gravity="center"
         android:text="@string/menu_text"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/choose_quiz_button"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:text="@string/quiz_button_text" />
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/quiz_text" />
+
+            <Button
+                android:id="@+id/choose_quiz_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/quiz_button_text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/quiz_result_text" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
