@@ -1,12 +1,13 @@
-package ru.valentin.falinv22.tasktwo;
+package ru.valentin.falinv22.tasktwo.quiz;
 
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import ru.valentin.falinv22.tasktwo.R;
 
 public class QuizGameLogic {
     public static final boolean TRUE_ANSWER = true;

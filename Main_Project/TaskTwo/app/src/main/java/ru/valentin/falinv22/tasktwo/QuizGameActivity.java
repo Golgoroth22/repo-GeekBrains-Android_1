@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import ru.valentin.falinv22.tasktwo.quiz.QuizGameLogic;
+
 public class QuizGameActivity extends AppCompatActivity {
     private QuizGameLogic gameLogic;
     private TextView question;
