@@ -1,10 +1,10 @@
 package ru.valentin.falinv22.tasktwo;
 
 public class Question {
-    private String answer;
+    private boolean answer;
     private String question;
 
-    public Question(String question, String answer) {
+    public Question(String question, boolean answer) {
         this.question = question;
         this.answer = answer;
     }
@@ -13,7 +13,7 @@ public class Question {
         return question;
     }
 
-    public String getAnswer() {
+    public boolean getAnswer() {
         return answer;
     }
 }

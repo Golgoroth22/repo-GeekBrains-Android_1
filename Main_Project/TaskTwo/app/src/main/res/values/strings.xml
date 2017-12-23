@@ -1,14 +1,9 @@
 <resources>
     <string name="app_name">TaskTwo</string>
 
-    <string name="q_robot">Ты робот?</string>
-    <string name="a_robot">0</string>
-    <string name="q_earth">Мы живем на земле?</string>
-    <string name="a_earth">1</string>
-    <string name="q_yes">Просто нажми ДА</string>
-    <string name="a_yes">1</string>
-    <string name="q_earth2">Земля плоская?</string>
-    <string name="a_earth2">0</string>
-    <string name="q_desert">Много ли в пустыне песка?</string>
-    <string name="a_desert">1</string>
+    <string name="q1">Ты робот?</string>
+    <string name="q2">Мы живем на земле?</string>
+    <string name="q3">Просто нажми ДА</string>
+    <string name="q4">Земля плоская?</string>
+    <string name="q5">Много ли в пустыне песка?</string>
 </resources>

@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QuizGameLogic {
-    public static final String TRUE_ANSWER = "1";
-    public static final String FALSE_ANSWER = "0";
+    public static final boolean TRUE_ANSWER = true;
+    public static final boolean FALSE_ANSWER = false;
     public static final String RIGHT_ANSWERS_PREF = "Верных ответов - ";
 
     private List<Question> questionList;
@@ -19,11 +19,11 @@ public class QuizGameLogic {
     public QuizGameLogic(Context context) {
         questionList = new ArrayList<>();
         Resources resources = context.getResources();
-        questionList.add(new Question(resources.getString(R.string.q_earth), resources.getString(R.string.a_earth)));
-        questionList.add(new Question(resources.getString(R.string.q_robot), resources.getString(R.string.a_robot)));
-        questionList.add(new Question(resources.getString(R.string.q_yes), resources.getString(R.string.a_yes)));
-        questionList.add(new Question(resources.getString(R.string.q_earth2), resources.getString(R.string.a_earth2)));
-        questionList.add(new Question(resources.getString(R.string.q_desert), resources.getString(R.string.a_desert)));
+        questionList.add(new Question(resources.getString(R.string.q1), resources.getBoolean(R.bool.a1)));
+        questionList.add(new Question(resources.getString(R.string.q2), resources.getBoolean(R.bool.a2)));
+        questionList.add(new Question(resources.getString(R.string.q3), resources.getBoolean(R.bool.a3)));
+        questionList.add(new Question(resources.getString(R.string.q3), resources.getBoolean(R.bool.a4)));
+        questionList.add(new Question(resources.getString(R.string.q5), resources.getBoolean(R.bool.a5)));
     }
 
     public String getQuestion() {
@@ -37,7 +37,7 @@ public class QuizGameLogic {
         for (Question q : questionList) {
             if (q.getQuestion().equals(question)) {
                 qForDelete = q;
-                if (q.getAnswer().equals(TRUE_ANSWER)) {
+                if (q.getAnswer() == TRUE_ANSWER) {
                     rightAnswers++;
                 }
             }
@@ -50,7 +50,7 @@ public class QuizGameLogic {
         for (Question q : questionList) {
             if (q.getQuestion().equals(question)) {
                 qForDelete = q;
-                if (q.getAnswer().equals(FALSE_ANSWER)) {
+                if (q.getAnswer() == FALSE_ANSWER) {
                     rightAnswers++;
                 }
             }
@@ -60,7 +60,6 @@ public class QuizGameLogic {
 
 
     public boolean checkStatus() {
-        System.out.println(questionList.size() + " size");
         if (questionList.size() == 0) return false;
         return true;
     }
