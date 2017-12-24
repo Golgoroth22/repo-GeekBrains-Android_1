@@ -55,10 +55,19 @@
                 android:text="НЕТ" />
         </LinearLayout>
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2" />
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="@string/quiz_next_or_forward_text" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

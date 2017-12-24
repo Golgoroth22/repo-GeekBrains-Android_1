@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">TaskTwo</string>
+    <string name="result">result</string>
 
     <string name="q1">Ты робот?</string>
     <string name="q2">Мы живем на земле?</string>
@@ -8,7 +9,10 @@
     <string name="q5">Много ли в пустыне песка?</string>
 
     <string name="menu_text">Многофункциональное приложение! Что будем делать?</string>
-    <string name="quiz_text">Викторина вопросов</string>
+    <string name="quiz_text">Поиграем в викторину вопросов?</string>
     <string name="quiz_button_text">Начать викторину!</string>
-    <string name="quiz_result_text">Лучший результат</string>
+    <string name="quiz_result_text">Лучший результат:</string>
+    <string name="quiz_next_or_forward_text">Если не знаешь ответ можешь перейти к следующему вопросу или вернуться к предыдущему</string>
+    <string name="quiz_final_text">Правильных ответов:</string>
+    <string name="quiz_final_button_text">Вернуться в меню</string>
 </resources>

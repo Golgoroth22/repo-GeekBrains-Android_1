@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".QuizGameActivity"></activity>
+        <activity android:name=".QuizGameFinishMenu"></activity>
         <activity android:name=".StartMenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
