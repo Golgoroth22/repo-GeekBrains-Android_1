@@ -11,9 +11,10 @@ import android.widget.Toast;
 import ru.valentin.falinv22.tasktwo.quiz.QuizGameLogic;
 
 public class QuizGameActivity extends AppCompatActivity {
-    private QuizGameLogic gameLogic;
+    public static final String RESULT = "result";
+    private static String maxResult = "0";
+    private static QuizGameLogic gameLogic;
     private TextView question;
-    private Toast toast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,7 @@ public class QuizGameActivity extends AppCompatActivity {
         if (gameLogic.checkStatus()) {
             question.setText(gameLogic.getQuestion());
         } else {
-            showMessage();
+            goToFinishMenu();
         }
     }
 
@@ -40,7 +41,7 @@ public class QuizGameActivity extends AppCompatActivity {
         if (gameLogic.checkStatus()) {
             question.setText(gameLogic.getQuestion());
         } else {
-            showMessage();
+            goToFinishMenu();
         }
     }
 
@@ -52,16 +53,21 @@ public class QuizGameActivity extends AppCompatActivity {
         question.setText(gameLogic.getQuestion());
     }
 
-    public void showMessage() {
-        if (toast != null) {
-            toast.cancel();
-        }
+    private void goToFinishMenu() {
+        Intent intent = new Intent(getApplicationContext(), QuizGameFinishMenu.class);
         String result = gameLogic.getResult();
-        toast = Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.CENTER, 0, 0);
-        toast.show();
-        Intent i = new Intent(this, this.getClass());
-        finish();
-        this.startActivity(i);
+        intent.putExtra(RESULT, result);
+        checkMax(result);
+        startActivity(intent);
+    }
+
+    private void checkMax(String res) {
+        if (Integer.parseInt(res) > Integer.parseInt(maxResult)) {
+            maxResult = res;
+        }
+    }
+
+    public static String getQuizGameResult() {
+        return maxResult;
     }
 }

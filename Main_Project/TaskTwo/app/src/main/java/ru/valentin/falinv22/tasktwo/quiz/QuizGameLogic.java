@@ -12,7 +12,7 @@ import ru.valentin.falinv22.tasktwo.R;
 public class QuizGameLogic {
     public static final boolean TRUE_ANSWER = true;
     public static final boolean FALSE_ANSWER = false;
-    public static final String RIGHT_ANSWERS_PREF = "Верных ответов - ";
+    public static final String RIGHT_ANSWERS_PREF = "";
 
     private List<Question> questionList;
     private int rightAnswers = 0;
