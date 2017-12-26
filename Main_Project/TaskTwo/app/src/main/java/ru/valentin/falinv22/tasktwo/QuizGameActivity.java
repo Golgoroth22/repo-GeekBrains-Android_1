@@ -3,15 +3,16 @@ package ru.valentin.falinv22.tasktwo;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Gravity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import ru.valentin.falinv22.tasktwo.quiz.QuizGameLogic;
 
 public class QuizGameActivity extends AppCompatActivity {
     public static final String RESULT = "result";
+    public static final String TAG = "QuizGameActivity";
+    public static final String TAG_FOR_SAVE_GAME_LOGIC = "save_game_logic";
     private static String maxResult = "0";
     private static QuizGameLogic gameLogic;
     private TextView question;
@@ -23,6 +24,17 @@ public class QuizGameActivity extends AppCompatActivity {
         gameLogic = new QuizGameLogic(this);
         question = (TextView) findViewById(R.id.question);
         question.setText(gameLogic.getQuestion());
+
+        if (savedInstanceState != null) {
+            gameLogic = (QuizGameLogic) savedInstanceState.getSerializable(TAG_FOR_SAVE_GAME_LOGIC);
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.d(TAG, "Вызван onSaveInstanceState");
+        outState.putSerializable(TAG_FOR_SAVE_GAME_LOGIC, gameLogic);
     }
 
     public void clickYesButton(View view) {
