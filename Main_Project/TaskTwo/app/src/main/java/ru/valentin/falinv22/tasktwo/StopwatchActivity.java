@@ -3,6 +3,7 @@ package ru.valentin.falinv22.tasktwo;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -10,6 +11,9 @@ import android.widget.TextView;
 import ru.valentin.falinv22.tasktwo.R;
 
 public class StopwatchActivity extends AppCompatActivity implements View.OnClickListener {
+    public static final String CURRENT_SECONDS = "CURRENT_SECONDS";
+    public static final String RUN_OR_NOT = "RUN_OR_NOT";
+    public static final String TAG = "StopwatchActivity";
     private int seconds = 0;
     private boolean running;
     private Button res;
@@ -18,10 +22,47 @@ public class StopwatchActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG, "Start onCreate()");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stopwatch);
+
+        if (savedInstanceState != null) {
+            seconds = savedInstanceState.getInt(CURRENT_SECONDS);
+            running = savedInstanceState.getBoolean(RUN_OR_NOT);
+        }
+
         createUI();
         runTimer();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG, "Start onStart()");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "Start onResume()");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, "Start onPause()");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "Start onStop()");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "Start onDestroy()");
     }
 
     private void createUI() {
@@ -31,6 +72,13 @@ public class StopwatchActivity extends AppCompatActivity implements View.OnClick
         res.setOnClickListener(this);
         str.setOnClickListener(this);
         stp.setOnClickListener(this);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(CURRENT_SECONDS, seconds);
+        outState.putBoolean(RUN_OR_NOT, running);
     }
 
     private void runTimer() {
