@@ -12,6 +12,8 @@
 
     <string name="menu_text">Многофункциональное приложение! Что будем делать?</string>
     <string name="quiz_text">Поиграем в викторину вопросов?</string>
+    <string name="stopwatch_text_menu">Воспользуемся таймером?</string>
+    <string name="stopwatch_button_text">ТАЙМЕР</string>
     <string name="quiz_button_text">Начать викторину!</string>
     <string name="quiz_result_text">Лучший результат:</string>
     <string name="quiz_next_or_forward_text">Если не знаешь ответ можешь перейти к следующему вопросу или вернуться к предыдущему</string>
