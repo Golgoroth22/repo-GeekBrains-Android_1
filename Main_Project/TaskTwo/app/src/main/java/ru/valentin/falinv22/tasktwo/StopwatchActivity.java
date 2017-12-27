@@ -10,6 +10,8 @@ import android.widget.TextView;
 import ru.valentin.falinv22.tasktwo.R;
 
 public class StopwatchActivity extends AppCompatActivity implements View.OnClickListener {
+    public static final String CURRENT_SECONDS = "CURRENT_SECONDS";
+    public static final String RUN_OR_NOT = "RUN_OR_NOT";
     private int seconds = 0;
     private boolean running;
     private Button res;
@@ -20,6 +22,12 @@ public class StopwatchActivity extends AppCompatActivity implements View.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stopwatch);
+
+        if (savedInstanceState != null) {
+            seconds = savedInstanceState.getInt(CURRENT_SECONDS);
+            running = savedInstanceState.getBoolean(RUN_OR_NOT);
+        }
+
         createUI();
         runTimer();
     }
@@ -31,6 +39,13 @@ public class StopwatchActivity extends AppCompatActivity implements View.OnClick
         res.setOnClickListener(this);
         str.setOnClickListener(this);
         stp.setOnClickListener(this);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(CURRENT_SECONDS, seconds);
+        outState.putBoolean(RUN_OR_NOT, running);
     }
 
     private void runTimer() {
