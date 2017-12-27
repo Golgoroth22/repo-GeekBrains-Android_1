@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 public class StartMenuActivity extends AppCompatActivity {
     private Button chooseQuizButton;
+    private Button chooseStopwatchButton;
     private TextView resultTextView;
 
     @Override
@@ -26,6 +27,15 @@ public class StartMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), QuizGameActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        chooseStopwatchButton = (Button) findViewById(R.id.stopwatch_button);
+        chooseStopwatchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), StopwatchActivity.class);
                 startActivity(intent);
             }
         });

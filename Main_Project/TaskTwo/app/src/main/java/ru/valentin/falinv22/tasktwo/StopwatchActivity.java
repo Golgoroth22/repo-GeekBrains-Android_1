@@ -20,13 +20,17 @@ public class StopwatchActivity extends AppCompatActivity implements View.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stopwatch);
+        createUI();
+        runTimer();
+    }
+
+    private void createUI() {
         res = (Button) findViewById(R.id.reset_button);
         str = (Button) findViewById(R.id.start_button);
         stp = (Button) findViewById(R.id.stop_button);
         res.setOnClickListener(this);
         str.setOnClickListener(this);
         stp.setOnClickListener(this);
-        runTimer();
     }
 
     private void runTimer() {
