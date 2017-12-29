@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/TaskTwo.iml" filepath="$PROJECT_DIR$/TaskTwo.iml" />
+      <module fileurl="file://C:\Android\AndriodProjects\repo-GeekBrains-Android_1.git\Main_Project\TaskTwo\TaskTwo.iml" filepath="C:\Android\AndriodProjects\repo-GeekBrains-Android_1.git\Main_Project\TaskTwo\TaskTwo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Android\AndriodProjects\repo-GeekBrains-Android_1.git\Main_Project\TaskTwo\app\app.iml" filepath="C:\Android\AndriodProjects\repo-GeekBrains-Android_1.git\Main_Project\TaskTwo\app\app.iml" />
     </modules>
   </component>
 </project>
