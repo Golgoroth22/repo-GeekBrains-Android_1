@@ -27,8 +27,12 @@
 
     <!-- Макет для отправки сообщения-->
     <string name="msg_receiver">Кому:</string>
-    <string-array name="receivers_list">
+    <string-array name="receivers_list_number">
         <item>8-905-933-9939</item>
         <item>8-812-716-2592</item>
+    </string-array>
+    <string-array name="receivers_list_name">
+        <item>Дед Мороз</item>
+        <item>Снегурочка</item>
     </string-array>
 </resources>

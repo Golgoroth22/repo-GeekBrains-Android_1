@@ -12,7 +12,7 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:columnCount="3"
+        android:columnCount="4"
         android:orientation="horizontal"
         android:paddingBottom="4dp"
         android:paddingLeft="8dp"
@@ -30,8 +30,16 @@
             android:layout_height="wrap_content"
             android:layout_columnSpan="2"
             android:layout_gravity="end"
-            android:entries="@array/receivers_list"
+            android:entries="@array/receivers_list_name"
             android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="3"
+            android:layout_gravity="end"
+            android:text="Number"
             android:textSize="16sp" />
 
         <EditText
