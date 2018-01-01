@@ -24,4 +24,11 @@
     <string name="stop_text">СТОП</string>
     <string name="start_text">СТАРТ</string>
     <string name="reset_text">СБРОС</string>
+
+    <!-- Макет для отправки сообщения-->
+    <string name="msg_receiver">Кому:</string>
+    <string-array name="receivers_list">
+        <item>8-905-933-9939</item>
+        <item>8-812-716-2592</item>
+    </string-array>
 </resources>
