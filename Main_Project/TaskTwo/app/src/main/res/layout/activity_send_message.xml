@@ -26,6 +26,7 @@
             android:textSize="16sp" />
 
         <Spinner
+            android:id="@+id/send_message_view_select"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnSpan="2"
@@ -35,6 +36,7 @@
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/send_message_view_receiver_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnSpan="3"
@@ -43,17 +45,20 @@
             android:textSize="16sp" />
 
         <EditText
+            android:id="@+id/send_message_view_msg"
             android:layout_width="match_parent"
             android:layout_height="118dp"
             android:layout_columnSpan="3"
-            android:layout_marginTop="4dp" />
+            android:layout_marginTop="8dp" />
 
-        <Button
+        <ImageButton
+            android:id="@+id/send_msq_view_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
             android:layout_gravity="end"
-            android:text="SEND" />
+            android:src="@drawable/ic_send_black"
+            android:background="@android:color/primary_text_light"/>
     </GridLayout>
 
 </android.support.v7.widget.CardView>
