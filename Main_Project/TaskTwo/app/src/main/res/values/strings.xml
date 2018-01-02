@@ -35,4 +35,5 @@
         <item>Мышка</item>
         <item>Кнопка</item>
     </string-array>
+    <string name="send">ОТПРАВИТЬ</string>
 </resources>
