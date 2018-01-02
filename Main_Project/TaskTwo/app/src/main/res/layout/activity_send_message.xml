@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/msg_receiver"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
         <Spinner
             android:id="@+id/send_message_view_select"
@@ -32,8 +32,7 @@
             android:layout_columnSpan="2"
             android:layout_gravity="end"
             android:entries="@array/receivers_list_name"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textColor="@android:color/black" />
 
         <TextView
             android:id="@+id/send_message_view_receiver_number"
@@ -42,22 +41,22 @@
             android:layout_columnSpan="3"
             android:layout_gravity="end"
             android:text="Number"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/send_message_view_msg"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_columnSpan="3"
             android:layout_marginTop="8dp" />
 
-        <ImageButton
+        <Button
             android:id="@+id/send_msq_view_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
             android:layout_gravity="end"
-            android:src="@drawable/ic_send_black"/>
+            android:text="@string/send" />
     </GridLayout>
 
 </android.support.v7.widget.CardView>
