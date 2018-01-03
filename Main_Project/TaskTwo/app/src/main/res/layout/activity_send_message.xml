@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_columnSpan="3"
             android:layout_gravity="end"
-            android:text="Number"
+            android:text="8-888-888-8888"
             android:textSize="14sp" />
 
         <EditText
