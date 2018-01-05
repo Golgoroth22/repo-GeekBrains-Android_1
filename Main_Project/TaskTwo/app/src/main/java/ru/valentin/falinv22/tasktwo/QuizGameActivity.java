@@ -14,7 +14,7 @@ public class QuizGameActivity extends AppCompatActivity {
     public static final String TAG = "QuizGameActivity";
     public static final String TAG_FOR_SAVE_GAME_LOGIC = "save_game_logic";
     private static String maxResult = "0";
-    private static QuizGameLogic gameLogic;
+    private QuizGameLogic gameLogic;
     private TextView question;
 
     @Override
