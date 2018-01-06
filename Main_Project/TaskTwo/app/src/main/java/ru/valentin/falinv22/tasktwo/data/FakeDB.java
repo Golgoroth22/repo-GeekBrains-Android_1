@@ -3,7 +3,6 @@ package ru.valentin.falinv22.tasktwo.data;
 import android.content.Context;
 import android.content.res.Resources;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +12,7 @@ import ru.valentin.falinv22.tasktwo.quiz.Question;
 public class FakeDB{
     private static FakeDB ourInstance;
 
-    private static List<Question> questionList;
+    private static List<Question> questionListForQuizGame;
 
     public static FakeDB getInstance(Context context1) {
         if (ourInstance == null) {
@@ -23,16 +22,16 @@ public class FakeDB{
     }
 
     private FakeDB(Context context) {
-        questionList = new ArrayList<>();
+        questionListForQuizGame = new ArrayList<>();
         Resources resources = context.getResources();
-        questionList.add(new Question(resources.getString(R.string.q1), resources.getBoolean(R.bool.a1)));
-        questionList.add(new Question(resources.getString(R.string.q2), resources.getBoolean(R.bool.a2)));
-        questionList.add(new Question(resources.getString(R.string.q3), resources.getBoolean(R.bool.a3)));
-        questionList.add(new Question(resources.getString(R.string.q4), resources.getBoolean(R.bool.a4)));
-        questionList.add(new Question(resources.getString(R.string.q5), resources.getBoolean(R.bool.a5)));
+        questionListForQuizGame.add(new Question(resources.getString(R.string.q1), resources.getBoolean(R.bool.a1)));
+        questionListForQuizGame.add(new Question(resources.getString(R.string.q2), resources.getBoolean(R.bool.a2)));
+        questionListForQuizGame.add(new Question(resources.getString(R.string.q3), resources.getBoolean(R.bool.a3)));
+        questionListForQuizGame.add(new Question(resources.getString(R.string.q4), resources.getBoolean(R.bool.a4)));
+        questionListForQuizGame.add(new Question(resources.getString(R.string.q5), resources.getBoolean(R.bool.a5)));
     }
 
     public List<Question> getQuestionList() {
-        return questionList;
+        return questionListForQuizGame;
     }
 }

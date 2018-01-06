@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ru.valentin.falinv22.tasktwo.R;
+import ru.valentin.falinv22.tasktwo.data.FakeDB;
 
 public class QuizGameLogic implements Serializable {
     public static final boolean TRUE_ANSWER = true;
@@ -19,12 +20,7 @@ public class QuizGameLogic implements Serializable {
 
     public QuizGameLogic(Context context) {
         questionList = new ArrayList<>();
-        Resources resources = context.getResources();
-        questionList.add(new Question(resources.getString(R.string.q1), resources.getBoolean(R.bool.a1)));
-        questionList.add(new Question(resources.getString(R.string.q2), resources.getBoolean(R.bool.a2)));
-        questionList.add(new Question(resources.getString(R.string.q3), resources.getBoolean(R.bool.a3)));
-        questionList.add(new Question(resources.getString(R.string.q4), resources.getBoolean(R.bool.a4)));
-        questionList.add(new Question(resources.getString(R.string.q5), resources.getBoolean(R.bool.a5)));
+        questionList.addAll(FakeDB.getInstance(context).getQuestionList());
     }
 
     public String getQuestion() {
