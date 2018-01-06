@@ -11,6 +11,7 @@
     <string name="q5">Много ли в пустыне песка?</string>
 
     <string name="menu_text">Многофункциональное приложение! Что будем делать?</string>
+    <string name="questions_answers">Ответы на вопросы</string>
     <string name="quiz_text">Поиграем в викторину вопросов?</string>
     <string name="stopwatch_text_menu">Воспользуемся таймером?</string>
     <string name="stopwatch_button_text">ТАЙМЕР</string>
