@@ -37,4 +37,5 @@
         <item>Кнопка</item>
     </string-array>
     <string name="send">ОТПРАВИТЬ</string>
+    <string name="title_activity_questions_list">QuestionsListActivity</string>
 </resources>

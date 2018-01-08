@@ -25,8 +25,9 @@
         </activity>
         <activity android:name=".SendMessageActivity" />
         <activity
-            android:name=".QuizQuestionsActivity"
-            android:parentActivityName=".StartMenuActivity" />
+            android:name=".QuestionsListActivity"
+            android:parentActivityName=".StartMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
