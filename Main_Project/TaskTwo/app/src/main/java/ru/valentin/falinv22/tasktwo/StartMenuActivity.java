@@ -36,7 +36,7 @@ public class StartMenuActivity extends AppCompatActivity {
         chooseQuestionsAnswers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), QuizQuestionsActivity.class);
+                Intent intent = new Intent(getApplicationContext(), QuestionsListActivity.class);
                 startActivity(intent);
             }
         });
