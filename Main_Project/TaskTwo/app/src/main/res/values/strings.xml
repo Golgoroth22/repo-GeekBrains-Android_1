@@ -20,6 +20,11 @@
     <string name="quiz_next_or_forward_text">Если не знаешь ответ можешь перейти к следующему вопросу или вернуться к предыдущему</string>
     <string name="quiz_final_text">Правильных ответов:</string>
     <string name="quiz_final_button_text">Вернуться в меню</string>
+    <string name="enter_question">Введите вопрос...</string>
+    <string name="answer">Ответ:</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="add_new_question">Добавить</string>
 
     <!-- Таймер -->
     <string name="stop_text">СТОП</string>
