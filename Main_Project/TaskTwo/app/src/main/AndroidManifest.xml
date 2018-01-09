@@ -28,6 +28,9 @@
             android:name=".QuestionsListActivity"
             android:parentActivityName=".StartMenuActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddNewQuestionActivity"
+            android:parentActivityName=".QuestionsListActivity"/>
     </application>
 
 </manifest>
