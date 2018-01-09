@@ -13,6 +13,7 @@ public class StartMenuActivity extends AppCompatActivity {
     private Button chooseQuizButton;
     private Button chooseStopwatchButton;
     private Button chooseQuestionsAnswers;
+    private Button chooseWTFButton;
     private TextView resultTextView;
 
     @Override
@@ -46,6 +47,15 @@ public class StartMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), StopwatchActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        chooseWTFButton = findViewById(R.id.wtf_button);
+        chooseWTFButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), SendMessageActivity.class);
                 startActivity(intent);
             }
         });

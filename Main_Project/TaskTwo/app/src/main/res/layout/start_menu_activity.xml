@@ -106,4 +106,17 @@
             android:text="@string/stopwatch_button_text" />
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/wtf_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:drawableTop="@drawable/ic_mood_bad_black_24dp"
+        android:text="WTF!?"/>
+
 </LinearLayout>
