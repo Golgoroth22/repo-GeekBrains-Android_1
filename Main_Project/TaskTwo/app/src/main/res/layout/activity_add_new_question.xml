@@ -20,9 +20,11 @@
         android:orientation="vertical">
 
         <EditText
+            android:id="@+id/new_question_edittext"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:hint="@string/enter_question"
+            android:inputType="textAutoCorrect"
             android:gravity="bottom"/>
 
         <LinearLayout
@@ -43,6 +45,7 @@
                 android:layout_gravity="center"/>
 
             <RadioGroup
+                android:id="@+id/add_question_radiogroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"

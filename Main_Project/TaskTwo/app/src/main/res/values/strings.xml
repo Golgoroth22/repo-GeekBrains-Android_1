@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">TaskTwo</string>
 
+    <!-- Для Сообщений-->
+    <string name="add_successfully">Вопрос добавлен!</string>
+    <string name="add_failed">Поля вопроса и ответа не должны быть пустыми!</string>
+
     <!-- Викторина вопросов -->
     <string name="result">result</string>
 
