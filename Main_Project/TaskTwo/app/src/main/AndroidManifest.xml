@@ -30,7 +30,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AddNewQuestionActivity"
-            android:parentActivityName=".QuestionsListActivity"/>
+            android:parentActivityName=".QuestionsListActivity" />
+        <activity android:name=".QuestionCardActivity"></activity>
     </application>
 
 </manifest>
