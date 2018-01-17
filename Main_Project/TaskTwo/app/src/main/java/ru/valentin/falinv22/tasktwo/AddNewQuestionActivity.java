@@ -33,15 +33,6 @@ public class AddNewQuestionActivity extends AppCompatActivity {
         editText = findViewById(R.id.new_question_edittext);
 
         radioGroup = findViewById(R.id.add_question_radiogroup);
-        int id = radioGroup.getCheckedRadioButtonId();
-        switch (id) {
-            case R.id.radio_yes:
-                answer = true;
-                break;
-            case R.id.radio_no:
-                answer = false;
-                break;
-        }
 
         addButton = findViewById(R.id.add_question_button);
         addButton.setOnClickListener(new View.OnClickListener() {
@@ -54,13 +45,24 @@ public class AddNewQuestionActivity extends AppCompatActivity {
 
     private void addNewQuestion() {
         int message;
+
         question = editText.getText().toString();
+        int id = radioGroup.getCheckedRadioButtonId();
+        switch (id) {
+            case R.id.radio_yes:
+                answer = true;
+                break;
+            case R.id.radio_no:
+                answer = false;
+                break;
+        }
+
         if (question.equals("")) {
             message = R.string.add_failed;
         } else {
             message = R.string.add_successfully;
             FakeDB.getInstance(getApplicationContext()).getQuestionList().add(new Question(question, answer));
-            Intent intent = new Intent(getApplicationContext(), StartMenuActivity.class);
+            Intent intent = new Intent(getApplicationContext(), MainMenuActivity.class);
             startActivity(intent);
         }
         Toast toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT);

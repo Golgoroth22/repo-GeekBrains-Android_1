@@ -26,7 +26,7 @@ public class QuizGameFinishMenu extends AppCompatActivity {
         goToMenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentToStartMenu = new Intent(getApplicationContext(), StartMenuActivity.class);
+                Intent intentToStartMenu = new Intent(getApplicationContext(), MainMenuActivity.class);
                 intentToStartMenu.putExtra(QuizGameActivity.RESULT, QuizGameActivity.getQuizGameResult());
                 startActivity(intentToStartMenu);
             }

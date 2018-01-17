@@ -8,18 +8,19 @@
     android:layout_marginLeft="@dimen/fab_min_8dp"
     android:layout_marginRight="@dimen/fab_min_8dp"
     android:layout_marginTop="@dimen/fab_min_8dp"
+    app:cardBackgroundColor="@color/color_result"
     tools:context="ru.valentin.falinv22.tasktwo.QuestionCardActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="@dimen/fab_min_8dp"
-        android:paddingLeft="@dimen/fab_min_8dp"
-        android:paddingRight="@dimen/fab_min_8dp"
-        android:paddingTop="@dimen/fab_min_8dp">
+        android:paddingLeft="@dimen/fab_min_4dp"
+        android:paddingRight="@dimen/fab_min_4dp"
+        android:paddingTop="@dimen/fab_min_4dp">
 
         <ImageView
-            android:id="@+id/card_pic"
+            android:id="@+id/question_card_pic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -27,28 +28,29 @@
             android:src="@drawable/ic_font_download_black_24dp" />
 
         <TextView
-            android:id="@+id/card_question"
+            android:id="@+id/question_card_question"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginLeft="@dimen/fab_min_8dp"
             android:layout_marginRight="@dimen/fab_min_8dp"
-            android:layout_toRightOf="@id/card_pic"
+            android:layout_toRightOf="@id/question_card_pic"
             android:maxLines="2"
             android:text="@string/hint_long_string"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/card_answer"
+            android:id="@+id/question_card_answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/card_pic"
+            android:layout_alignBottom="@id/question_card_pic"
             android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/fab_min_4dp"
             android:maxLines="1"
             android:text="@string/hint_short_string" />
 
         <ImageView
-            android:id="@+id/card_close"
+            android:id="@+id/question_card_close"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
