@@ -5,25 +5,25 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
+import android.support.v7.widget.RecyclerView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import ru.valentin.falinv22.tasktwo.data.FakeDB;
 import ru.valentin.falinv22.tasktwo.quiz.Question;
 
 public class QuestionsListFragment extends Fragment {
     public static final String ANSWER_PREF = "Ответ - ";
-    public static final String QUESTION = "question";
-    public static final String ANSWER = "answer";
     public static final String YES = "ДА";
     public static final String NO = "НЕТ";
-    private ListView questionListView;
+
+    private RecyclerView questionsRecyclerView;
+    private QuestionAdapter questionAdapter;
     private ArrayList<Question> db;
 
     @Nullable
@@ -33,9 +33,14 @@ public class QuestionsListFragment extends Fragment {
         db = new ArrayList<>();
         db.addAll(FakeDB.getInstance(getContext()).getQuestionList());
 
-        View layout = inflater.inflate(R.layout.fragment_questions_list, container, false);
+        View root = inflater.inflate(R.layout.fragment_questions_list, container, false);
 
-        FloatingActionButton fab = (FloatingActionButton) layout.findViewById(R.id.fab);
+        initUI(root);
+        return root;
+    }
+
+    private void initUI(View rootView) {
+        FloatingActionButton fab = (FloatingActionButton) rootView.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,30 +49,49 @@ public class QuestionsListFragment extends Fragment {
             }
         });
 
-        initUI(layout);
-        return layout;
+        questionAdapter = new QuestionAdapter();
+        questionsRecyclerView = rootView.findViewById(R.id.question_list_list_recycler);
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+
+        questionsRecyclerView.setLayoutManager(layoutManager);
+        questionsRecyclerView.setAdapter(questionAdapter);
     }
 
-    private void initUI(View layout) {
-        questionListView = layout.findViewById(R.id.questions_list);
+    private class QuestionAdapter extends RecyclerView.Adapter<QuestionViewHolder> {
 
-        ArrayList<HashMap<String, String>> dbList = new ArrayList<>();
-        HashMap<String, String> map;
-
-        for (int i = 0; i < FakeDB.getInstance(getContext()).getQuestionList().size(); i++) {
-            map = new HashMap<>();
-            String q = FakeDB.getInstance(getContext()).getQuestionList().get(i).getQuestion();
-            boolean a = FakeDB.getInstance(getContext()).getQuestionList().get(i).getAnswer();
-            map.put(QUESTION, q);
-            if (a) map.put(ANSWER, ANSWER_PREF + YES);
-            if (!a) map.put(ANSWER, ANSWER_PREF + NO);
-            dbList.add(map);
+        @Override
+        public QuestionViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_question_card, parent, false);
+            return new QuestionViewHolder(itemView);
         }
 
-        SimpleAdapter adapter = new SimpleAdapter(getContext(), dbList, android.R.layout.simple_list_item_2,
-                new String[]{QUESTION, ANSWER},
-                new int[]{android.R.id.text1, android.R.id.text2});
-        questionListView.setAdapter(adapter);
+        @Override
+        public void onBindViewHolder(QuestionViewHolder holder, int position) {
+            holder.questionText.setText(db.get(position).getQuestion());
+
+            boolean temp = FakeDB.getInstance(getContext()).getQuestionList().get(position).getAnswer();
+            if (temp) holder.questionAnswer.setText(ANSWER_PREF + YES);
+            if (!temp) holder.questionAnswer.setText(ANSWER_PREF + NO);
+        }
+
+        @Override
+        public int getItemCount() {
+            if (db != null) {
+                return db.size();
+            }
+            return 0;
+        }
     }
 
+    private class QuestionViewHolder extends RecyclerView.ViewHolder {
+        TextView questionText;
+        TextView questionAnswer;
+
+        public QuestionViewHolder(View itemView) {
+            super(itemView);
+            questionText = itemView.findViewById(R.id.question_card_question);
+            questionAnswer = itemView.findViewById(R.id.question_card_answer);
+        }
+    }
 }
