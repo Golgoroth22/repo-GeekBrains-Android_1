@@ -33,15 +33,6 @@ public class AddNewQuestionActivity extends AppCompatActivity {
         editText = findViewById(R.id.new_question_edittext);
 
         radioGroup = findViewById(R.id.add_question_radiogroup);
-//        int id = radioGroup.getCheckedRadioButtonId();
-//        switch (id) {
-//            case R.id.radio_yes:
-//                answer = true;
-//                break;
-//            case R.id.radio_no:
-//                answer = false;
-//                break;
-//        }
 
         addButton = findViewById(R.id.add_question_button);
         addButton.setOnClickListener(new View.OnClickListener() {
