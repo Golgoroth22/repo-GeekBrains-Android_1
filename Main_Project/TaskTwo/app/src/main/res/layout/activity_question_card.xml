@@ -8,15 +8,16 @@
     android:layout_marginLeft="@dimen/fab_min_8dp"
     android:layout_marginRight="@dimen/fab_min_8dp"
     android:layout_marginTop="@dimen/fab_min_8dp"
+    app:cardBackgroundColor="@color/color_result"
     tools:context="ru.valentin.falinv22.tasktwo.QuestionCardActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="@dimen/fab_min_8dp"
-        android:paddingLeft="@dimen/fab_min_8dp"
-        android:paddingRight="@dimen/fab_min_8dp"
-        android:paddingTop="@dimen/fab_min_8dp">
+        android:paddingLeft="@dimen/fab_min_4dp"
+        android:paddingRight="@dimen/fab_min_4dp"
+        android:paddingTop="@dimen/fab_min_4dp">
 
         <ImageView
             android:id="@+id/question_card_pic"
@@ -44,6 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/question_card_pic"
             android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/fab_min_4dp"
             android:maxLines="1"
             android:text="@string/hint_short_string" />
 
