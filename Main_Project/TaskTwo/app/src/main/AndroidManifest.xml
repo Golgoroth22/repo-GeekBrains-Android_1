@@ -11,12 +11,12 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".QuizGameActivity"
-            android:parentActivityName=".StartMenuActivity" />
+            android:parentActivityName=".MainMenuActivity" />
         <activity android:name=".QuizGameFinishMenu" />
         <activity
             android:name=".StopwatchActivity"
-            android:parentActivityName=".StartMenuActivity" />
-        <activity android:name=".StartMenuActivity">
+            android:parentActivityName=".MainMenuActivity" />
+        <activity android:name=".MainMenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,14 +24,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SendMessageActivity" />
-        <activity
-            android:name=".QuestionsListActivity"
-            android:parentActivityName=".StartMenuActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".AddNewQuestionActivity"
-            android:parentActivityName=".QuestionsListActivity" />
-        <activity android:name=".QuestionCardActivity"></activity>
+        <activity android:name=".AddNewQuestionActivity" />
+        <activity android:name=".QuestionCardActivity" />
     </application>
 
 </manifest>

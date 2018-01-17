@@ -60,7 +60,7 @@ public class AddNewQuestionActivity extends AppCompatActivity {
         } else {
             message = R.string.add_successfully;
             FakeDB.getInstance(getApplicationContext()).getQuestionList().add(new Question(question, answer));
-            Intent intent = new Intent(getApplicationContext(), StartMenuActivity.class);
+            Intent intent = new Intent(getApplicationContext(), MainMenuActivity.class);
             startActivity(intent);
         }
         Toast toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT);

@@ -4,12 +4,13 @@ package ru.valentin.falinv22.tasktwo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class StartMenuActivity extends AppCompatActivity {
+public class MainMenuActivity extends AppCompatActivity {
     private Button chooseQuizButton;
     private Button chooseStopwatchButton;
     private Button chooseQuestionsAnswers;
@@ -37,8 +38,9 @@ public class StartMenuActivity extends AppCompatActivity {
         chooseQuestionsAnswers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), QuestionsListActivity.class);
-                startActivity(intent);
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                QuestionsListFragment listFragment = new QuestionsListFragment();
+                fragmentManager.beginTransaction().add(R.id.main_menu_container, listFragment).commit();
             }
         });
 
