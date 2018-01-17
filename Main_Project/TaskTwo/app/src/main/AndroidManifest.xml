@@ -25,7 +25,6 @@
         </activity>
         <activity android:name=".SendMessageActivity" />
         <activity android:name=".AddNewQuestionActivity" />
-        <activity android:name=".QuestionCardActivity" />
     </application>
 
 </manifest>
