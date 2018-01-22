@@ -1,4 +1,4 @@
-package ru.valentin.falinv22.logintest;
+package ru.valentin.falinv22.minionstest;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "ru.valentin.falinv22.logintest"
+        applicationId "ru.valentin.falinv22.minionstest"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
