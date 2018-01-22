@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- padding dimens -->
-    <dimen name="dimen_short_16dp">16dp</dimen>
-    <!-- other -->
-    <dimen name="dimen_190dp">190dp</dimen>
-</resources>
